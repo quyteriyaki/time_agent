@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "prepare dist",
+      "type": "shell",
+      "command": "mkdir dist/ || mkdir dist/config || echo",
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "close": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "copy config",
+      "type": "shell",
+      "command": "cp src/config/* dist/config",
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "close": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "copy twee to build",
+      "type": "shell",
+      "command": "cp src/twee/*.twee dist"
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "tweego --test -o build/index_test.html dist",
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "close": true,
+        "clear": true
+      },
+      "dependsOn": [
+        "prepare dist",
+        "copy config",
+        "build scripts",
+        "copy twee to build"
+      ],
+      "dependsOrder": "sequence"
+    }
+  ]
+}

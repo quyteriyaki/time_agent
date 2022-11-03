@@ -1,0 +1,33 @@
+:: StoryData
+{
+  "ifid": "C847838A-F0B8-4847-9661-2C79382719D7",
+  "format": "Snowman",
+  "format-version": "2.0.2"
+}
+
+:: StoryTitle
+Laboratory Test
+
+:: GlobalStyles [stylesheet]
+tw-passage {
+  font-family: Hack
+}
+
+:: GlobalScript [script]
+window.setup = window.setup || {};
+
+
+
+:: Start
+Laboratory Test
+
+This is an example of GOAP agents & interactions
+
+
+[[Room Render]]
+:: Room Render
+
+:: Event Render
+<%= s.currentEvent>
+
+<a href="javascript: window.history.back()"> Go back </a>

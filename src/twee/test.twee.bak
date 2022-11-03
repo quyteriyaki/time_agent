@@ -1,0 +1,49 @@
+:: StoryData
+{
+  "ifid": "05477B9B-AC9A-42A4-8690-606337039182",
+  "format": "Snowman",
+  "format-version": "2.0.2"
+}
+
+:: StoryTitle
+Time Travel Thing
+
+:: GlobalStyles [stylesheet]
+tw-passage {
+  font-family: Hack
+}
+
+:: GlobalSript [script]
+window.setup = window.setup || {};
+var s = window.story.state;
+s.world = world;
+s.currentRoom = s.world.map.getRoomByName("G: Lab Foyer")
+s.tools = {
+  AddPassage: AddPassage
+}
+
+:: Start
+Time travel thingo
+When the page is first loaded, generate the next sequences of events that are possible.
+Generate passages from here because it's not going to be fun - https://www.youtube.com/watch?v=8yDKUkvqn6I
+
+[[Room Render]]
+
+:: Room Render
+<%= s.currentRoom.name %>
+<br />
+<%= s.currentRoom.generateFullDescription() %>
+
+<%
+// Post load script
+$(function () {
+  s.currentRoom.connected.forEach(room => {
+    room.setRoomLinks(window)
+  })
+});
+%>
+
+:: Event Render
+<%= s.currentEvent>
+
+<a href="javascript: window.history.back()"> Go back </a>

@@ -1,0 +1,51 @@
+:: StoryData
+{
+  "ifid": "05477B9B-AC9A-42A4-8690-606337039182",
+  "format": "Snowman",
+  "format-version": "2.0.2"
+}
+
+:: StoryTitle
+Time Travel Thing
+
+:: GlobalStyles [stylesheet]
+tw-passage {
+  font-family: Hack
+}
+
+:: GlobalSript [script]
+window.setup = window.setup || {};
+
+:: Start
+Time Travel Thing
+
+[[Next Page|present_brief]]
+
+:: present_brief
+- Instruction on what to do
+- Any questions
+[[Go to room xxx|present_room]]
+
+:: present_room
+- Are you ready
+- No
+[[Start the machine|present_loading_screen]]
+
+:: present_loading_screen
+- Sensation
+
+[[Wake up|past_start]]
+
+:: past_start
+- Pain and agony
+- Look around
+- Figure out where you are
+
+[[???|RoomA]]
+[[???|RoomB]]
+
+:: RoomA
+Room A
+
+:: RoomB
+Room B
