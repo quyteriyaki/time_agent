@@ -17,15 +17,12 @@ tw-passage {
 window.setup = window.setup || {};
 
 
-
 :: Start
 Laboratory Test
 
-This is an example of GOAP agents & interactions
-
-
 [[Room Render]]
 :: Room Render
+<%= >
 
 :: Event Render
 <%= s.currentEvent>

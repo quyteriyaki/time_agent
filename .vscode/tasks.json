@@ -4,18 +4,7 @@
     {
       "label": "prepare dist",
       "type": "shell",
-      "command": "mkdir dist/ || mkdir dist/config || echo",
-      "presentation": {
-        "reveal": "silent",
-        "revealProblems": "onProblem",
-        "close": true,
-        "clear": true
-      }
-    },
-    {
-      "label": "copy config",
-      "type": "shell",
-      "command": "cp src/config/* dist/config",
+      "command": "mkdir dist/ || echo 0",
       "presentation": {
         "reveal": "silent",
         "revealProblems": "onProblem",

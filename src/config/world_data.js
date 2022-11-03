@@ -1,4 +1,4 @@
-var world_data = {
+export var world_data = {
     "locations": [
       {
         "id": 0,

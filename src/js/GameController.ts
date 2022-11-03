@@ -1,6 +1,7 @@
 import {GameMap} from "./lib/Locations/Map"
 import { Character } from "./lib/Characters/Character";
 import { GameRoom } from "./lib/Locations/Room";
+import { now_world_lab } from "../config/world_data_main";
 
 export class GameController {
   map: GameMap;

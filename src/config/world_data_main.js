@@ -1,4 +1,4 @@
-var now_world_lab = {
+export var now_world_lab = {
   "locations": [
     {
       "id": 10001,
